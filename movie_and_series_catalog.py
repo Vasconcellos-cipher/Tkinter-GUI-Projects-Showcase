@@ -134,7 +134,7 @@ class CatalogueApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Media Catalogue System")
-        self.root.geometry("650x550")
+        self.root.geometry("650x600")
         self.catalogue = MediaCatalogue()
 
         # --- SEÇÃO DE EXIBIÇÃO ---
@@ -149,13 +149,22 @@ class CatalogueApp:
         frame_search = tk.LabelFrame(root, text="Search & Remove Operations")
         frame_search.pack(pady=10, fill="x", padx=20)
 
-        tk.Label(frame_search, text="Title:").grid(row=0, column=0, padx=5, pady=5)
-        self.ent_search = tk.Entry(frame_search, width=30)
+        tk.Label(frame_search).grid(row=0, column=0, padx=5, pady=5)
+        self.ent_search = tk.Entry(frame_search, width=25)
         self.ent_search.grid(row=0, column=1, padx=5, pady=5)
 
-        tk.Button(frame_search, text="Search", command=self.search_item, bg="#007BFF", fg="white").grid(row=0, column=2, padx=5, pady=5)
-        tk.Button(frame_search, text="Remove", command=self.remove_item, bg="#DC3545", fg="white").grid(row=0, column=3, padx=5, pady=5)
+        tk.Label(frame_search, text="Type:").grid(row=0, column=2, padx=5, pady=5)
+        self.combo_search_type = ttk.Combobox(
+            frame_search,
+            values=["All", "Movie", "TV Series"],
+            state="readonly",
+            width=12
+        )
+        self.combo_search_type.current(0)
+        self.combo_search_type.grid(row=0, column=3, padx=5, pady=5)
 
+        tk.Button(frame_search, text="Search", command=self.search_item, bg="#007BFF", fg="white").grid(row=0, column=4, padx=5, pady=5)
+        tk.Button(frame_search, text="Remove", command=self.remove_item, bg="#DC3545", fg="white").grid(row=0, column=5, padx=5, pady=5)
         # --- SEÇÃO DE CADASTRO ---
         frame_add = tk.LabelFrame(root, text="Add New Media")
         frame_add.pack(pady=10, fill="x", padx=20)
@@ -240,22 +249,48 @@ class CatalogueApp:
             messagebox.showerror("Catalogue Error", str(e))
 
     def search_item(self):
-        """Searches for items matching the text query."""
         query = self.ent_search.get().lower()
-        if not query:
-            self.update_display()
-            return
+        selected_type = self.combo_search_type.get()
 
-        results = [item for item in self.catalogue.items if query in item.title.lower()]
-        
+        results = []
+
+        for item in self.catalogue.items:
+
+            title_match = query in item.title.lower()
+
+            if selected_type == "All":
+                type_match = True
+
+            elif selected_type == "Movie":
+                type_match = type(item) is Movie
+
+            elif selected_type == "TV Series":
+                type_match = isinstance(item, TVSeries)
+
+            else:
+                type_match = True
+
+            if title_match and type_match:
+                results.append(item)
+
         self.txt_display.config(state="normal")
         self.txt_display.delete("1.0", tk.END)
+
         if results:
-            self.txt_display.insert(tk.END, f"--- Search Results for '{query}' ---\n\n")
+            self.txt_display.insert(
+            tk.END,
+            f"--- Search Results ({selected_type}) ---\n\n"
+            )
+
             for i, item in enumerate(results, 1):
                 self.txt_display.insert(tk.END, f"{i}. {item}\n")
+
         else:
-            self.txt_display.insert(tk.END, f"No media found matching '{query}'.")
+            self.txt_display.insert(
+            tk.END,
+            f"No {selected_type.lower()} found."
+            )
+
         self.txt_display.config(state="disabled")
 
     def remove_item(self):
@@ -282,22 +317,7 @@ class CatalogueApp:
 
 
 # --- EXECUÇÃO DO APLICATIVO ---
-# Substitua o final do seu código por isso no Colab:
 if __name__ == "__main__":
-    from pyvirtualdisplay import Display
-
-    # Cria uma tela virtual invisível no servidor do Google
-    display = Display(visible=0, size=(800, 600))
-    display.start()
-
     root = tk.Tk()
     app = CatalogueApp(root)
-
-    # Como o Colab não abre janelas físicas, usamos um update rápido
-    # para simular o app ou testar se ele compila sem erros!
-    root.update()
-    print("A interface gráfica foi inicializada com sucesso na nuvem!")
-    
-    
-#!apt-get install -y xvfb python3-tk
-#!pip install pyvirtualdisplay
+    root.mainloop()

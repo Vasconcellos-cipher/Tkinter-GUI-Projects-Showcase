@@ -2,9 +2,9 @@
 
 Welcome to my repository of desktop applications built with **Python** and **Tkinter**.
 
-This repository serves as a practical portfolio where I apply concepts of **Object-Oriented Programming (OOP)**, software development, data persistence, and desktop application design.
+This repository serves as a practical portfolio where I apply concepts of **Object-Oriented Programming (OOP)**, software development, GUI design, data persistence, networking fundamentals, cryptography fundamentals, and problem-solving through progressively more challenging projects.
 
-As my studies progress, new projects will be added, ranging from basic programming exercises to cybersecurity and automation tools.
+The goal is to build a collection of practical applications while continuously improving programming, software engineering, and desktop application development skills.
 
 ---
 
@@ -19,9 +19,10 @@ tkinter-gui-projects/
 │   ├── README.md
 │   └── movie_and_series_catalog.py
 │
-├── updating/
+├── project_name/
 │   ├── README.md
-│   └── updating.py
+│   └── main.py
+│
 └── ...
 ```
 
@@ -57,12 +58,26 @@ Each project contains:
 * Event-Driven Programming
 * Responsive Layouts
 
+### Networking
+
+* Socket Programming
+* Port Scanning
+* IP Addressing
+* Subnet Calculations
+
+### Cryptography
+
+* Hashing
+* Encryption Fundamentals
+* Secure Data Storage
+
 ### Software Engineering
 
 * Separation of Concerns
 * Code Organization
 * Reusable Components
 * Error Handling
+* Modular Design
 
 ---
 
@@ -112,25 +127,63 @@ git clone https://github.com/YOUR_USERNAME/tkinter-gui-projects.git
 Navigate to the desired project:
 
 ```bash
-cd tkinter-gui-projects/catalogo
+cd tkinter-gui-projects/project_name
 ```
 
 Run the application:
 
 ```bash
-python movie_and_series_catalog.py
+python main.py
 ```
 
 ---
 
 ## 🔮 Upcoming Projects
 
-### General Programming
+### Beginner Projects
 
-* [x]  **Media Catalogue System**
-* [ ] Mini Local Marketplace
-* [ ] Daily Habit Tracker
-* [ ] Personal Finance Budgeter
+* [ ] Fortune Cookie
+* [ ] Dice Rolling Simulator
+* [ ] Rock Paper Scissors Lizard Spock
+* [ ] Who Wants to Be a Millionaire
+* [ ] Quiz Game
+* [ ] Text-Based Adventure
+* [ ] Chatbot
+* [ ] Truth or Dare
+* [ ] Leap Year
+* [ ] Blackjack
+* [ ] Metric Conversion Tool
+* [ ] Guess My Number
+* [ ] Word Counter
+* [ ] Morse Code Translator
+* [ ] Roman Numeral Converter
+* [ ] NYC MetroCard Calculator
+* [ ] Caesar Cipher
+
+### Intermediate Projects
+
+* [ ] Bank Account
+* [ ] To-Do List
+* [ ] Grocery Manager
+* [ ] Class Schedule
+* [ ] Expense Tracker
+* [ ] Library Management System
+* [ ] Contact Book
+* [ ] Recipe Book
+* [ ] Pokédex
+
+### GUI Applications
+
+* [ ] Hangman
+* [ ] Tic-Tac-Toe
+* [ ] 2048
+* [ ] Wordle
+* [ ] GUI Alarm Clock
+* [ ] GUI Calculator
+* [ ] Cards Against Humanity
+* [ ] T-Rex Run
+* [ ] Minesweeper
+* [ ] Paint
 
 ### Networking
 
@@ -143,12 +196,12 @@ python movie_and_series_catalog.py
 * [ ] Text Encrypter / Decrypter
 * [ ] Secure Password Manager
 
-### DevSecOps & Security
+### General Programming
 
-* [ ] SSH Remote Command Runner
-* [ ] Vulnerability Report Dashboard
-* [ ] Log Monitor & Alert System
-* [ ] Phishing Link Analyzer
+* [x] Media Catalogue System
+* [ ] Mini Local Marketplace
+* [ ] Daily Habit Tracker
+* [ ] Personal Finance Budgeter
 
 ---
 
@@ -159,8 +212,10 @@ This repository documents my journey learning:
 * Python
 * Object-Oriented Programming
 * Desktop Application Development
-* Cybersecurity Fundamentals
-* DevSecOps Automation
+* GUI Design
+* Networking Fundamentals
+* Cryptography Fundamentals
+* Software Engineering
 
 The objective is to continuously improve both programming and software engineering skills through practical projects.
 
@@ -170,12 +225,10 @@ The objective is to continuously improve both programming and software engineeri
 
 **Ana Souza**
 
-Cybersecurity and Python enthusiast focused on learning through hands-on projects.
+Python developer and cybersecurity enthusiast focused on learning through hands-on projects involving desktop applications, automation, networking, and security.
 
 ---
 
-⭐ Feel free to explore the projects and follow my progress as new applications are added.
+⭐ This repository is continuously evolving as new projects are completed and new skills are acquired.
 
----
-
-Uma dica: eu criaria um **README principal mais geral (esse acima)** e depois um **README específico dentro de cada pasta de projeto** (`catalogo/README.md`) com screenshots, funcionalidades e explicação detalhada daquele projeto. Isso deixa o GitHub com aparência muito mais profissional para recrutadores.
+📌 Every project has its own folder, documentation, and implementation details, allowing the repository to serve as a structured learning portfolio and showcase of practical Python development.

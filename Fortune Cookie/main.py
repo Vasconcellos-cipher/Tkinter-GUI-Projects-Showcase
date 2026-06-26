@@ -1,6 +1,8 @@
 import random
 import tkinter as tk
 
+janela = tk.Tk()
+
 frases = [
     "Great opportunities begin with small steps.",
     "Believe in yourself and success will follow.",
@@ -19,3 +21,4 @@ def abrir_biscoito():
     print(frase)
 
 abrir_biscoito()
+

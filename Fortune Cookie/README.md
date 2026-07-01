@@ -1,18 +1,24 @@
 # 🥠 Fortune Cookie
 
-A simple desktop application built with **Python** and **Tkinter** that displays a random fortune message when the user clicks a button.
+A simple desktop application built with **Python** and **Tkinter** that displays a random motivational message whenever the user opens a fortune cookie.
 
-This project is part of my **Tkinter GUI Projects Portfolio** and was created to practice basic GUI development, event handling, functions, lists, and random selection in Python.
+This project was created as part of my Python GUI learning journey, focusing on event-driven programming, Tkinter widgets, and basic interface development.
+
+---
+
+## 📸 Screenshot
+
+![Fortune Cookie](screens/screen_project.png)
 
 ---
 
 ## ✨ Features
 
-- Random fortune message generation
-- Simple Tkinter window
-- Button-based interaction
-- Clean visual layout
-- Beginner-friendly code structure
+- Display a random motivational quote
+- Interactive graphical interface
+- Button-triggered events
+- Simple and clean design
+- Beginner-friendly implementation
 
 ---
 
@@ -20,40 +26,50 @@ This project is part of my **Tkinter GUI Projects Portfolio** and was created to
 
 - Python 3
 - Tkinter
-- random module
+- Random (Python Standard Library)
 
-No external dependencies are required.
+---
+
+## 📚 Concepts Practiced
+
+- Object-Oriented Programming (OOP)
+- Tkinter GUI development
+- Event-driven programming
+- Functions
+- Lists
+- Random selection
+- Widget configuration
+- Layout management with `pack()`
 
 ---
 
 ## 📂 Project Structure
 
-```text
-fortune_cookie/
+```
+fortune-cookie/
 │
 ├── assets/
-│   └── screenshots/
+│   └── screenshot.png
 │
+├── main.py
 ├── README.md
-├── requirements.txt
-├── .gitignore
-└── main.py
-````
+└── requirements.txt
+```
 
 ---
 
-## 🚀 How to Run
+## ▶️ How to Run
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/tkinter-gui-projects.git
+git clone https://github.com/YOUR_USERNAME/Tkinter-GUI-Projects-Showcase.git
 ```
 
 Navigate to the project folder:
 
 ```bash
-cd tkinter-gui-projects/fortune_cookie
+cd "Fortune Cookie"
 ```
 
 Run the application:
@@ -64,36 +80,30 @@ python main.py
 
 ---
 
-## 📚 Concepts Practiced
+## 🎯 Learning Objectives
 
-* Lists
-* Functions
-* Variables
-* `random.choice()`
-* Tkinter window
-* Labels
-* Buttons
-* Event handling
+This project was developed to practice:
 
----
-
-## 📸 Screenshots
-
-Screenshots will be added after the interface is completed.
+- Creating graphical interfaces with Tkinter
+- Working with Labels and Buttons
+- Updating widgets dynamically
+- Handling button click events
+- Organizing a simple GUI application
 
 ---
 
-## 🔮 Future Improvements
+## 🚀 Future Improvements
 
-* Add a fortune cookie image
-* Add a short opening animation
-* Improve visual styling
-* Add more fortune messages
+- Add fortune cookie images
+- Improve the visual design
+- Add opening animations
+- Support multiple languages
+- Create different quote categories
 
 ---
 
-## 👩‍💻 Author
+## 👨‍💻 Author
 
-**Ana Souza**
+**Ana Caroline Vasconcellos**
 
-Python and cybersecurity enthusiast focused on learning through hands-on projects.
+NOC Analyst with a strong interest in Cybersecurity, Python development, automation, networking, and continuous learning through hands-on projects.

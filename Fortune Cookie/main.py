@@ -1,8 +1,6 @@
 import random
 import tkinter as tk
 
-janela = tk.Tk()
-
 frases = [
     "Great opportunities begin with small steps.",
     "Believe in yourself and success will follow.",
@@ -18,7 +16,33 @@ frases = [
 
 def abrir_biscoito():
     frase = random.choice(frases)
-    print(frase)
+    frase_label.config(text=frase)
 
-abrir_biscoito()
+janela = tk.Tk()
+janela.title("Fortune Cookie")
+janela.geometry("500x350")
+janela.configure(bg="black")
+janela.resizable(False, False)
+frase_label = tk.Label(
+    janela,
+    text="Click the button",
+    bg="white",
+    fg="black",
+    font=("Arial", 14),
+    wraplength=350,
+    justify="center"
+)
 
+frase_label.pack(pady=70)
+
+botao = tk.Button(
+    janela,
+    text="🥠 Open Fortune Cookie",
+    command=abrir_biscoito,
+    cursor="hand2",
+    font=("Arial", 11, "bold")
+)
+
+botao.pack(pady=20)
+
+janela.mainloop()

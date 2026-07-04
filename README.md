@@ -142,7 +142,7 @@ python main.py
 
 ### Beginner Projects
 
-* [ ] Fortune Cookie
+* [x] Fortune Cookie
 * [ ] Dice Rolling Simulator
 * [ ] Rock Paper Scissors Lizard Spock
 * [ ] Who Wants to Be a Millionaire

@@ -8,7 +8,7 @@ This project was created as part of my Python GUI learning journey, focusing on 
 
 ## 📸 Screenshot
 
-![Fortune Cookie](screens/screen_project.png)
+![Fortune Cookie](assets/screens/screen_project.png)
 
 ---
 

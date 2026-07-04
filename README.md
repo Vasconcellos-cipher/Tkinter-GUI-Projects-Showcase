@@ -15,13 +15,23 @@ tkinter-gui-projects/
 │
 ├── README.md
 │
-├── catalogo/
+├── media-catalogue-system/
+│   ├── assets/
+│   │   └── screenshots/
+│   │       └── media-catalogue-system.png
+│   ├── .gitignore
 │   ├── README.md
-│   └── movie_and_series_catalog.py
+│   ├── main.py
+│   └── requirements.txt
 │
-├── project_name/
+├── project-name/
+│   ├── assets/
+│   │   └── screenshots/
+│   │       └── project-name.png
+│   ├── .gitignore
 │   ├── README.md
-│   └── main.py
+│   ├── main.py
+│   └── requirements.txt
 │
 └── ...
 ```

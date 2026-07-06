@@ -3,15 +3,26 @@ import random
 
 def roll_dice():
     return random.randint(1, 6)
-   
+
 def button_clicked(): 
     dice_number = roll_dice()
     result_label.config(text=f"Result: {dice_number}")
 
 window = tk.Tk()
-window.title()
+window.title("Dice Rolling Simulator")
+window.geometry("500x350")
+window.configure(bg="white")
+window.resizable(False, False)
 
-window.geometry()
+title_label = tk.Label(
+    window,
+    text="🎲 Dice Rolling Simulator",
+    bg="white",
+    fg="black",
+    font=("Arial", 18, "bold")
+)
+
+title_label.pack(pady=30)
 
 result_label = tk.Label(
     window,
@@ -23,25 +34,16 @@ result_label = tk.Label(
     justify="center"
 )
 
-'''
-title_label
+result_label.pack(pady=40)
 
+roll_button = tk.Button(
+    window,
+    text="Roll the Dice",
+    command=button_clicked,
+    font=("Arial", 12, "bold"),
+    cursor="hand2"
+)
 
+roll_button.pack(pady=20)
 
-input_entry
-
-roll_button
-
-exit_button
-
-result
-
-dice_number
-'''
-#Label()
-
-#Button()
-
-#pack()
-
-#mainloop()
+window.mainloop()

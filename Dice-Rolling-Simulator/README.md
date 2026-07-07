@@ -9,10 +9,10 @@ This project was created as part of my Python GUI learning journey, focusing on 
 ## 📸 Screenshot
 
 <p align="center">
-    <img src="assets/screenshots/dice-rolling-simulator.png" alt="Dice Rolling Simulator Screenshot" width="600">
+    <img src="assets/dice-rolling-simulator.png" alt="Dice Rolling Simulator Screenshot" width="600">
 </p>
 <p align="center">
-    <img src="assets/screenshots/dice-rolling-simulator2.png" alt="Dice Rolling Simulator Screenshot" width="600">
+    <img src="assets/dice-rolling-simulator2.png" alt="Dice Rolling Simulator Screenshot" width="600">
 </p>
 
 ---

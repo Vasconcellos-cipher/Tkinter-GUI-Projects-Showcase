@@ -152,8 +152,8 @@ python main.py
 
 ### Beginner Projects
 
-* [x] Fortune Cookie
-* [ ] Dice Rolling Simulator
+* [x] **Fortune Cookie**
+* [x] **Dice Rolling Simulator**
 * [ ] Rock Paper Scissors Lizard Spock
 * [ ] Who Wants to Be a Millionaire
 * [ ] Quiz Game
@@ -208,7 +208,7 @@ python main.py
 
 ### General Programming
 
-* [x] Media Catalogue System
+* [x] **Media Catalogue System**
 * [ ] Mini Local Marketplace
 * [ ] Daily Habit Tracker
 * [ ] Personal Finance Budgeter

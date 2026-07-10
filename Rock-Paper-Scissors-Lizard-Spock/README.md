@@ -1,3 +1,5 @@
+# Rock Paper Scissors Lizard Spock Game
+
 ## Fluxo do algoritmo:
 
 Player escolheu

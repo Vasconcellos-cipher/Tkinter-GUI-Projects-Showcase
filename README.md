@@ -154,7 +154,7 @@ python main.py
 
 * [x] **Fortune Cookie**
 * [x] **Dice Rolling Simulator**
-* [ ] Rock Paper Scissors Lizard Spock
+* [x] **Rock Paper Scissors Lizard Spock**
 * [ ] Who Wants to Be a Millionaire
 * [ ] Quiz Game
 * [ ] Text-Based Adventure

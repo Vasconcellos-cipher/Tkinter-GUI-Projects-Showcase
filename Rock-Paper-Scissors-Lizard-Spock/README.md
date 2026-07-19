@@ -11,6 +11,12 @@ This project was developed to practice **GUI development**, **functions**, **con
 <p align="center">
   <img src="assets/screenshot.png" width="700">
 </p>
+<p align="center">
+  <img src="assets/screenshot2.png" width="700">
+</p>
+<p align="center">
+  <img src="assets/screenshot3.png" width="700">
+</p>
 
 ---
 

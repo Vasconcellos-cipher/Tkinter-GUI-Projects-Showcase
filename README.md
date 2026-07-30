@@ -156,7 +156,6 @@ python main.py
 * [x] **Dice Rolling Simulator**
 * [x] **Rock Paper Scissors Lizard Spock**
 * [x] Who Wants to Be a Millionaire
-* [ ] Quiz Game
 * [ ] Text-Based Adventure
 * [ ] Chatbot
 * [ ] Truth or Dare

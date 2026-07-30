@@ -155,7 +155,7 @@ python main.py
 * [x] **Fortune Cookie**
 * [x] **Dice Rolling Simulator**
 * [x] **Rock Paper Scissors Lizard Spock**
-* [ ] Who Wants to Be a Millionaire
+* [x] Who Wants to Be a Millionaire
 * [ ] Quiz Game
 * [ ] Text-Based Adventure
 * [ ] Chatbot

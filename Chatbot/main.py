@@ -19,18 +19,28 @@ def get_bot_response(user_message):
         return responses[clean_message] 
     else:
         return responses["default"]
+    
+def send_message():
+    user_text = entry_box.get()
+    
+    bot_text = get_bot_response(user_text)
+    chat_history.insert(tk.END, "You: " + user_text + "\n")
+    chat_history.insert(tk.END, "PyBot: " + bot_text + "\n\n")
+    
+    entry_box.delete(0, tk.END)
 
 window = tk.Tk()
 window.title("PyBot - Chatbot")
 window.geometry("400x500")
 
-chat_history = scrolledtext.ScrolledText(window, wrap=tk.WORD, state="disabled", width=45, height=20)
+chat_history = scrolledtext.ScrolledText(window, wrap=tk.WORD, state="normal", width=45, height=20)
 chat_history.pack(padx=10, pady=10)
 
 entry_box = tk.Entry(window, width=35)
 entry_box.pack(pady=5)
 
-send_button = tk.Button(window, text="Send")
+
+send_button = tk.Button(window, text="Send", command=send_message)
 send_button.pack(pady=5)
 
 window.mainloop()

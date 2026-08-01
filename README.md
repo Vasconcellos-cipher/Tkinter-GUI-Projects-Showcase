@@ -155,43 +155,18 @@ python main.py
 * [x] **Fortune Cookie**
 * [x] **Dice Rolling Simulator**
 * [x] **Rock Paper Scissors Lizard Spock**
-* [x] Who Wants to Be a Millionaire
-* [x] Text-Based Adventure
-* [x] Chatbot
-* [ ] Truth or Dare
-* [ ] Leap Year
-* [ ] Blackjack
-* [ ] Metric Conversion Tool
-* [ ] Guess My Number
-* [ ] Word Counter
-* [ ] Morse Code Translator
-* [ ] Roman Numeral Converter
-* [ ] NYC MetroCard Calculator
-* [ ] Caesar Cipher
-
-### Intermediate Projects
-
-* [ ] Bank Account
-* [ ] To-Do List
-* [ ] Grocery Manager
-* [ ] Class Schedule
-* [ ] Expense Tracker
-* [ ] Library Management System
-* [ ] Contact Book
-* [ ] Recipe Book
-* [ ] Pokédex
+* [x] **Who Wants to Be a Millionaire**
+* [x] **Text-Based Adventure**
+* [x] **Chatbot**
+* [x] **Truth or Dare**
+* [x] **Morse Code Translator**
 
 ### GUI Applications
 
 * [ ] Hangman
-* [ ] Tic-Tac-Toe
-* [ ] 2048
-* [ ] Wordle
 * [ ] GUI Alarm Clock
-* [ ] GUI Calculator
-* [ ] Cards Against Humanity
-* [ ] T-Rex Run
 * [ ] Minesweeper
+* [ ] Pokédex
 * [ ] Paint
 
 ### Networking
@@ -202,14 +177,12 @@ python main.py
 ### Cryptography
 
 * [ ] Hash Generator & Verifier
-* [ ] Text Encrypter / Decrypter
 * [ ] Secure Password Manager
 
 ### General Programming
 
 * [x] **Media Catalogue System**
 * [ ] Mini Local Marketplace
-* [ ] Daily Habit Tracker
 * [ ] Personal Finance Budgeter
 
 ---

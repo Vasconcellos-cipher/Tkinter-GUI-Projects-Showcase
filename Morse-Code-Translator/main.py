@@ -9,3 +9,13 @@ MORSE_CODE_DICT = {
     '0': '-----', ' ': '/'
 }
 
+def text_to_morse(text):
+    translator_message = text.strip().upper()
+    peaces_morse = []
+    
+    for i in translator_message:
+        if i in MORSE_CODE_DICT:
+            peaces_morse.append(MORSE_CODE_DICT[i])
+        
+    return " ".join(peaces_morse)
+

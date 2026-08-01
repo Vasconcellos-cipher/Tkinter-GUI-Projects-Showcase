@@ -1,32 +1,33 @@
-# 📻 Morse Code Translator
+# 💬 PyBot - Tkinter Chatbot
 
-A desktop GUI application built with **Python** and **Tkinter** that converts plain text strings into standard Morse code representation in real time.
+A desktop GUI application built with **Python** and **Tkinter** featuring an interactive rule-based chatbot with scrollable conversation history.
 
-This project was developed to practice **GUI layout setup**, **dictionary lookups**, **string manipulation**, **event handling**, and **dynamic label updating**.
+This project was developed to practice **GUI development**, **text widget manipulation**, **event handling**, **dictionary lookups**, **string sanitization**, and **clean project architecture**.
 
 ---
 
 ## 📸 Screenshot
 
 <p align="center">
-  <img src="assets/screenshots/morse_code_translator.png" width="400">
+  <img src="assets/screenshots/chatbot.png" width="400">
 </p>
 
 ---
 
 ## ✨ Features
 
-- 🖥️ Clean desktop interface built with Tkinter
-- 🔤 Automatic text sanitization and normalization (`.strip().upper()`)
-- 📻 Fast dictionary-driven Morse code lookups
-- 📝 Responsive text display using word wrapping for longer output strings
+- 🖥️ Desktop graphical interface built with Tkinter
+- 📜 Scrollable chat history using `ScrolledText`
+- 🤖 Rule-based keyword matching with fallback responses
+- 🧹 Automatic input field clearing after message dispatch
+- 💬 Clean message formatting separating user and bot turns
 
 ---
 
 ## 🧠 System Algorithm
 
 ```text
-User Types Text & Clicks 'Translate'
+User Enters Text & Clicks 'Send'
 
     │
     ▼
@@ -36,17 +37,7 @@ Fetch Input via entry_box.get()
     │
     ▼
 
-Normalize String (.strip().upper())
-
-    │
-    ▼
-
-Loop Through Characters
-
-    │
-    ▼
-
-Is Character in MORSE_CODE_DICT?
+Is the Message Non-Empty?
 
     │
 ┌───┴───┐
@@ -55,35 +46,50 @@ Yes     No
 │       │
 ▼       ▼
 
-Append      Ignore /
-Match       Skip
-│           │
-└─────┬─────┘
-      │
-      ▼
+Sanitize String        Ignore Action
+(.strip().lower())
+    │
+    ▼
 
-Join List with Spaces (" ".join())
+Search Key in Responses Dictionary
+
+    │
+┌───┴───┐
+│       │
+Found   Not Found
+│       │
+▼       ▼
+
+Return      Return Default
+Match       Fallback Text
+    │           │
+    └─────┬─────┘
+          │
+          ▼
+
+Append Both Messages to chat_history (.insert())
 
     │
     ▼
 
-Update Result Label via result_label.config()
+Clear Input Field (.delete(0, tk.END))
 
 ```
 
 ### Logic Summary
 
-1. The user inputs a text string into the `entry_box` and triggers `send_message()` by clicking `translate_button`.
-2. The `text_to_morse()` function strips whitespace and converts characters to uppercase to match the dictionary keys.
-3. It iterates through the string, appending mapped Morse representations into a list.
-4. The list items are joined by spaces and passed back to update the `result_label`.
+1. User types a prompt into `entry_box` and triggers the `send_message()` callback via `send_button`.
+2. The system retrieves the text string using `.get()` and strips whitespace while lowering case for normalization.
+3. The cleaned string is checked against the keys in the `responses` dictionary.
+4. If a match exists, the associated response string is returned; otherwise, a default fallback message is served.
+5. Both the user input and bot response are appended to `chat_history` via `.insert(tk.END, ...)` before clearing `entry_box` with `.delete(0, tk.END)`.
 
 ---
 
 ## 🛠️ Technologies
 
 * Python 3
-* Tkinter (`Tk`, `Entry`, `Button`, `Label`)
+* Tkinter (`scrolledtext`, `Entry`, `Button`, `Tk`)
 
 ---
 
@@ -99,7 +105,7 @@ git clone [https://github.com/yourusername/tkinter-gui-projects.git](https://git
 Go to the project folder:
 
 ```bash
-cd tkinter-gui-projects/Morse-Code-Translator
+cd tkinter-gui-projects/chatbot
 
 ```
 
@@ -133,15 +139,14 @@ python main.py
 ## 📂 Project Structure
 
 ```text
-Morse-Code-Translator/
+chatbot/
 │
 ├── assets/
 │   └── screenshots/
-│       └── morse_code_translator.png
+│       └── chatbot.png
 │
 ├── .gitignore
 ├── README.md
-├── requirements.txt
 └── main.py
 
 ```
@@ -150,17 +155,29 @@ Morse-Code-Translator/
 
 ## 📝 Commit History Workflow
 
-* `chore: setup project structure and morse code dictionary`
-* `feat: add text to morse translation logic`
-* `feat: connect GUI components to morse translator logic`
-* `docs: add README for morse code translator project`
+This project followed conventional commits across its development cycle:
+
+* `chore: setup project structure and venv for chatbot`
+* `feat: create chatbot response logic and dictionary`
+* `feat: build base tkinter layout for chatbot`
+* `feat: connect user input and message display`
+* `docs: add README for chatbot project`
 
 ---
 
 ## 📚 Concepts Practiced
 
-* Python dictionary lookups and error handling with `if in`
-* String processing methods (`.strip()`, `.upper()`, `" ".join()`)
-* Tkinter basic layout management using `.pack()`
-* Event binding via button `command` callbacks
-* Dynamic label content updates with `.config()`
+* String processing (`.strip()`, `.lower()`)
+* Dictionary state lookups with default fallbacks
+* Tkinter layout elements (`Tk`, `ScrolledText`, `Entry`, `Button`)
+* Event handling using `command` callbacks
+* Text insertion and clearing (`.insert()`, `.delete()`)
+* Conventional Git commit patterns and workspace isolation (`venv`)
+
+---
+
+## 🎯 Learning Objectives
+
+This project was created to reinforce Python GUI fundamentals by building a functional desktop messaging layout.
+
+The core focus was connecting user input widgets to dictionary-driven evaluation functions and rendering dynamic updates inside scrollable text views.

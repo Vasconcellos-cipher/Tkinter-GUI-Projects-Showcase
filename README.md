@@ -163,8 +163,8 @@ python main.py
 
 ### GUI Applications
 
-* [ ] Hangman
-* [ ] Paint
+* [x] **Hangman**
+* [x] **Paint**
 * [ ] Minesweeper
 * [ ] GUI Alarm Clock
 * [ ] Pokédex

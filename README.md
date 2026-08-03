@@ -164,20 +164,20 @@ python main.py
 ### GUI Applications
 
 * [ ] Hangman
-* [ ] GUI Alarm Clock
-* [ ] Minesweeper
-* [ ] Pokédex
 * [ ] Paint
-
-### Networking
-
-* [ ] Visual Port Scanner
-* [ ] IP & Subnet Calculator
+* [ ] Minesweeper
+* [ ] GUI Alarm Clock
+* [ ] Pokédex
 
 ### Cryptography
 
 * [ ] Hash Generator & Verifier
 * [ ] Secure Password Manager
+
+### Networking
+
+* [ ] Visual Port Scanner
+* [ ] IP & Subnet Calculator
 
 ### General Programming
 
